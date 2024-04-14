@@ -2435,6 +2435,10 @@ video {
   outline-style: double;
 }
 
+.outline-4{
+  outline-width: 4px;
+}
+
 .outline-\[3px\]{
   outline-width: 3px;
 }

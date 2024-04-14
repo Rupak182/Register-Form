@@ -29,7 +29,7 @@ let showForm= ()=>{
 
     
     circles[count].style.backgroundColor="rgb(132, 94, 238)";
-    circles[count].classList.add("outline" ,"outline-[3px]" ,"outline-gray-400")
+    circles[count].classList.add("outline" ,"outline-4" ,"outline-gray-400")
     
 
     document.querySelector(".step").innerHTML=`Step ${count+1} of 3`;
