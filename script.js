@@ -29,17 +29,17 @@ let showForm= ()=>{
 
     
     circles[count].style.backgroundColor="rgb(132, 94, 238)";
-    circles[count].classList.add("outline" ,"outline-4" ,"outline-gray-400")
+    // circles[count].classList.add("outline" ,"outline-4" ,"outline-[#4D5562]")
     
 
     document.querySelector(".step").innerHTML=`Step ${count+1} of 3`;
     
 
-    if(count-1>=0)
-    {
-        circles[count-1].classList.remove("outline" ,"outline-[3px]" ,"outline-gray-400")
+    // if(count-1>=0)
+    // {
+    //     circles[count-1].classList.remove("outline" ,"outline-[3px]" ,"outline-gray-400")
 
-    }
+    // }
 
 
 
