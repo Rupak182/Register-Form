@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/output.css">
+    <title>Document</title>
+</head>
+
+<body class="bg-black font-inter">
+
+    <div class="contain min-h-[100vh] min-w-full bg-[url('blur-radial.svg')] flex flex-col justify-center items-center gap-2 ">
+
+        <div
+            class="register relative  bg-[#212936] border border-[#4D5562] w-[70%] md:w-1/3 p-10 flex flex-col gap-10 rounded-2xl">
+            <div class="head text-white text-xl">
+                <h1>Register</h1>
+            </div>
+
+            <div class="inputs flex flex-col gap-2  ">
+                <label class="text-[#A1A1A9]" for="name">Name</label>
+                <input placeholder="enter your name"
+                    class="name bg-[#212936] text-white rounded-xl p-3 border border-[#A1A1A9]" type="text">
+
+                <label class="text-[#A1A1A9]" for="email">Email</label>
+                <input placeholder="example@gmail.com"
+                    class="email bg-[#212936] text-white rounded-xl p-3 border border-[#A1A1A9]" type="email">
+
+            </div>
+
+            <div class="btn  self-center justify-self-center text-sm">
+                <button
+                    class=" border border-[#845EEE] text-white bg-gradient-to-tl from-[#845EEE] to-[#652CD1] p-6 py-2 rounded-full">Continue</button>
+            </div>
+
+        </div>
+
+        <div
+            class="topics  bg-[#212936] border border-[#4D5562] w-[70%] md:w-1/3 p-10 flex flex-col gap-10 rounded-2xl">
+            <div class="head text-white text-xl">
+                <h1>Which topics you are interested in? </h1>
+            </div>
+
+            <div class="topic text-gray-400 flex flex-col gap-3  ">
+                <button class="t1 text-left bg-[#4D5562] rounded-xl p-4 border border-gray-400 ">
+                    Software Development
+                </button>
+
+                <button class="t2 text-left bg-[#4D5562] rounded-xl p-4 border border-gray-400 ">
+                    User Experience
+                </button>
+
+                <button class="t3 text-left bg-[#4D5562] rounded-xl p-4 border border-gray-400 ">
+                    Graphic Design
+                </button>
+
+            </div>
+
+
+            <div class="btn  self-center justify-self-center text-sm">
+                <button
+                    class=" border border-[#845EEE] text-white bg-gradient-to-tl from-[#845EEE] to-[#652CD1] p-6 py-2 rounded-full">Continue</button>
+            </div>
+
+        </div>
+
+
+
+        <div class=" infos bg-[#212936] border border-[#4D5562] w-[70%] md:w-1/3 p-10 flex flex-col gap-10 rounded-2xl">
+            <div class="head text-white text-xl">
+                <h1>Summary</h1>
+            </div>
+
+            <div class="info">
+                <div class="gen flex flex-col gap-2 ">
+                    <span class=" text-gray-400">Name:<span id="name" class=" text-white">Emily Johnson</span> </span>
+                    <span class=" text-gray-400">Email:<span id="email"
+                            class=" text-white">emily@emilyjohnsonstl@gmail.com</span>
+                    </span>
+                </div>
+            </div>
+
+            <div class="top text-gray-400 flex flex-col gap-1">
+                <span>Topics:</span>
+                <ul class="list text-white mx-5 list-disc decoration-white">
+                </ul>
+
+            </div>
+
+
+            <div class="btn  self-center justify-self-center text-sm">
+                <button
+                    class=" border border-[#845EEE] text-white bg-gradient-to-tl from-[#845EEE] to-[#652CD1] p-6 py-2 rounded-full">Confirm</button>
+            </div>
+
+        </div>
+
+        <div class="others flex items-center justify-center  gap-2 text-sm font-bold w-1/3">
+            <div class="step text-[#A1A1A9] mx-2 ">
+                <span>Step 1 of 3</span>
+            </div>
+    
+            <div class="circles flex flex-row gap-2 ">
+                <div class="c1 outline outline-[3px] outline-gray-400  w-[12px] h-[12px] rounded-full"></div>
+                <div class="c2 bg-gray-400 w-[12px] h-[12px] rounded-full"></div>
+                <div class="c3 bg-gray-400 w-[12px] h-[12px] rounded-full"></div>
+            </div>
+        </div>
+         
+
+    </div>
+
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
