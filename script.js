@@ -27,8 +27,13 @@ let showForm= ()=>{
     let circles= Array.from(document.querySelector(".circles").children);
     console.log();
 
+    
     circles[count].style.backgroundColor="rgb(132, 94, 238)";
     circles[count].classList.add("outline" ,"outline-[3px]" ,"outline-gray-400")
+    
+
+    document.querySelector(".step").innerHTML=`Step ${count+1} of 3`;
+    
 
     if(count-1>=0)
     {
@@ -40,6 +45,42 @@ let showForm= ()=>{
 
 
 }
+
+
+let isvalid = ()=>{
+
+    let ereg= /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+
+    if(count===0)
+    {
+        if(Name==="" || email ==="")
+        {
+            return false;
+        }
+
+        else if (ereg.test(email)===false)
+        {
+            return false;
+        }
+
+        else
+        {
+            return true;
+        }
+    }
+
+    else if(count===1)
+    {
+        if(options.length==0)
+            return false;
+        else
+            return true;
+    }
+
+    return true;
+}
+
+
 
 let select = ()=>{
     let buttons= Array.from(document.querySelector(".topic").children);
@@ -104,29 +145,38 @@ let steps = ()=>{
 
             console.log(count);
 
-            count++;
+            if(count<2 && isvalid()===true)
+            {
+                count++;
+                showForm();
+            }
+
+            else if(count>=2)
+            {
+                count=2;
+                alert("Success");
+            }
 
             if(count===1)
             {
                 select();
-
             }
 
             if(count==2)
             {
                 let list =document.querySelector(".list")
 
-                options.forEach((op)=>{
-                    let li= document.createElement("li");
-                    li.innerText=op;
-                    list.append(li);
-                })
+                if(list.children.length==0)
+                {
+                    options.forEach((op)=>{
+                        let li= document.createElement("li");
+                        li.innerText=op;
+                        list.append(li);
+                    })
+                }
+
             }
 
-            if(count<=2)
-            {
-                showForm();
-            }
 
 
         })
